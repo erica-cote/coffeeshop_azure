@@ -1,0 +1,428 @@
+@charset "UTF-8";
+
+/* This is a comment.*/
+
+/*
+Color Pallet
+Forest Green
+Saddlebrown
+Beige
+green
+sienna
+*/
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    background-color: rgb(146, 119, 101);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    font: bold 2.2em Times, serif;
+    
+}
+
+h2{
+    color: saddlebrown;
+    font: bold 1.2em Times, serif;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+h3 {
+    color: saddlebrown;
+    font: bold times, serif;
+}
+
+strong{
+    font: bolder;
+    color: green;
+}
+
+b {
+    color: saddlebrown;
+    font: Times, serif;
+}
+
+/*ID selectors and class selectors; must be typed in a certain way*/
+
+/*Selectors: names MUST match HTML for it to work*/
+
+/* For class type in a period before the selection*/
+
+.price{
+    font: bolder;
+    color: sienna;
+}
+
+/* For ID type in # before ID name*/
+
+#drinks{
+    background-color: antiquewhite;
+}
+
+header{
+    text-align: left;
+}
+
+#drinks, #treats, #healthy {
+    border: 2px solid;
+    border-color: saddlebrown;
+    background-color: rgba(56, 115, 63, .25);
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+#offer {
+    text-align: center;
+}
+
+
+
+/* ---------------------------------------NAV STYLE------------------------*/
+
+.main_nav {
+    list-style: none; /*makes bullets go away*/
+    display: flex;
+    align-items: center;
+    padding: .3em;
+    background-color: rgb(74, 53, 20);
+    margin: 0;
+    height: 100px;
+
+}
+
+.main_nav a {
+    color: white;
+    padding: 60px 40px;
+    text-decoration: none; /*removes underlines*/
+    
+}
+
+/*push logo to the left side visually*/
+
+li.logo {
+    margin-right: auto;
+}
+
+/*push logo to the right/ logo must be moved to bottom of list
+li.logo {
+    margin-left: auto;
+} */
+
+/* style link hover*/
+
+.main_nav a:hover {
+    background-color: rgb(244, 233, 216);
+    color: rgb(74, 53, 20)
+}
+
+/*.................. END OF NAV........................ */
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+
+/* ....................Hero Image........................*/
+
+/*--------INDEX HERO--------------*/
+
+.hero_image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.2)), url(images/coffee_beans.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+
+.hero_header {
+    top: 40%;
+    padding-left: 15px;
+    margin: 0;
+    position: absolute;
+    text-align: left;
+
+}
+
+/* ---------------------Button-----------------------*/
+
+
+.button {
+    background-color: saddlebrown;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 3px;
+    padding:20px 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.button a:hover {
+    background-color: white;
+    color: saddlebrown;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 3px;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* ---------------------GRID-----------------------*/
+
+#index_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+     'welcome welcome welcome'
+     'shop shop shop'
+     'fact1 fact2 fact3'
+     'about about about'
+     'product1 product2 product3'
+     'reviews reviews reviews'
+    ;
+    background-color: rgb(244, 233, 216);
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#welcome {
+    grid-area: welcome;
+    object-fit: cover;
+    text-align: center;
+    
+}
+
+#shop {
+    grid-area: shop;
+    object-fit: cover;
+}
+
+#fact1 {
+    grid-area: fact1;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact2 {
+    grid-area: fact2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#fact3 {
+    grid-area: fact3;
+    object-fit: cover;
+    text-align: center;
+}
+
+#about {
+    grid-area: about;
+    object-fit: cover;
+    
+}
+
+#product1 {
+    grid-area: product1;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product2 {
+    grid-area: product2;
+    object-fit: cover;
+    text-align: center;
+}
+
+#product3 {
+    grid-area: product3;
+    object-fit: cover;
+    text-align: center;
+}
+
+#reviews {
+    grid-area: reviews;
+    object-fit: cover;
+    text-align: justify;
+}
+
+#menu_button {
+    text-align: center;
+    
+}
+
+#about_button {
+    text-align: center;
+}
+
+/*--------------------Grid Margins-----------------------*/
+
+#welcome {
+    margin: 0px 15px 0px 30px;
+    padding: 60px 0px 60px 0px;
+}
+
+#fact1, #fact2, #fact3 {
+    margin: 20px 50px 20px 50px;
+}
+
+#product1, #product2, #product3 {
+    margin: 40px;
+}
+
+#about {
+    margin: 80px 375px 10px 375px;
+}
+
+#shop {
+    padding: 0px 0px 80px 0px;
+}
+
+#reviews {
+    margin: 0px 650px 0px 30px;
+    padding: 10px 0px 60px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------------------Footer------------------------*/
+
+footer {
+    background-color: rgb(74, 53, 20);
+    color: white;
+    text-align: center;
+    padding: 2em;
+    margin: 0;
+    height: 75px;
+}
+
+footer p {
+    margin: 0px 0px 40px 0px;
+}
+
+/*-----------------------------Responsive Design---------------------------*/
+
+/*-----------------------Media Queries------------------------*/
+
+@media screen and (max-width:1000px){
+#index_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+     'welcome welcome welcome'
+     'shop shop shop'
+     'fact1 fact2 fact3'
+     'about about about'
+     'product1 product2 product3'
+     'reviews reviews reviews'
+    ;
+    background-color: rgb(244, 233, 216);
+    justify-content: center;
+    margin: 0 auto;
+}
+#about {
+    margin: 80px 260px 80px 260px;
+}
+
+#reviews {
+    margin: 0px 500px 0px 50px;
+    padding: 10px 0px 60px 0px;
+}
+
+}
+
+
+
+@media screen and (max-width: 800px){
+    #index_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(8,auto);
+        grid-template-areas:
+         'welcome welcome'
+         'shop shop'
+         'fact1 fact2' 
+         'fact3 fact3'
+         'about about'
+         'product1 product2'
+         'product3 product3'
+         'reviews reviews'
+        ;
+        background-color: rgb(244, 233, 216);
+        justify-content: center;
+        margin: 0 auto;
+
+}
+    #about {
+        margin: 80px 156px 80px 156px;
+    }
+
+    #reviews {
+        margin: 0px 300px 0px 100px;
+        padding: 10px 0px 60px 0px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #index_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10,auto);
+        grid-template-areas:
+         'welcome'
+         'shop'
+         'fact1' 
+         'fact2' 
+         'fact3'
+         'about'
+         'product1' 
+         'product2'
+         'product3'
+         'reviews'
+        ;
+        background-color: rgb(244, 233, 216);
+        justify-content: center;
+        margin: 0 auto;
+        
+
+}
+
+#about {
+    margin: 80px 100px 80px 100px;
+}
+
+#reviews {
+    margin: 0px 110px 0px 50px;
+    padding: 10px 0px 60px 0px;
+}
+}
